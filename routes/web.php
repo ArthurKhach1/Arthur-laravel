@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,13 +36,8 @@ Route::post('/sign-up', [UserController::class,'postSignUp']) ;
 
 
 Route::get('users',[UserController::class,'getUsers'])->name('users.list');
-/*
- * sdgsrg
- * srgr
- * dsghrd
- * sgrg
- */
+
 
 
 Route::post('/sign-up', [UserController::class,'postSignUp']) ;
-//sds
+Route::get('feed' , [DashboardController::class,'getFeed'])->name('dashboard');
